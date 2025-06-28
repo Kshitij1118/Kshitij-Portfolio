@@ -410,7 +410,7 @@ header ul a:hover{
 
 }
 
-.project-vidbox video{
+.project-vidbox img{
     object-fit: cover;
     width: 100%;
     box-shadow: 0 0 10px lightgray;
@@ -418,7 +418,7 @@ header ul a:hover{
     transition: 0.5s;
 }
 
-.project-card video:hover{
+.project-card img:hover{
     box-shadow: 0 0 25px rgb(255, 255, 255);
 }
 
@@ -611,9 +611,14 @@ header ul a:hover{
     animation: autoRun 10s linear infinite;
     transition: filter 0.5s;
     animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .slider .list .item img{
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 @keyframes autoRun{
     from{
@@ -636,8 +641,8 @@ header ul a:hover{
     width: 80%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 10%;
     align-items: center;
     position: relative;
 }
@@ -646,6 +651,26 @@ header ul a:hover{
     position: absolute;
     top: 10%;
     left: 40%;
+}
+
+.contact-description {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.contact-description p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: lightgray;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    width: 100%;
 }
 
 .social-box {
